@@ -43,3 +43,39 @@ linkPara.appendChild(text);
 - To remove a node, and you know the parent, use `node.removeChild(element to be removed)`.
 - When removing a node based only on a reference to itself, use `element.remove()`.
   - This is not supported in older browsers. In that case, use `element.parentNode.removeChild(element)`.
+
+## Manipulating styles
+
+- You can use inline styling by adding `HTMLElement.style` property directly in JS.
+- For example `para.style.backgroundColor = "white";`
+- Note that when applying inline styling in JS, you need to use lower camelCase, whereas in CSS, you would use hyphenated property names.
+- Also note that the values are enclosed in quotes.
+
+- Another common way to manipulate CSS is by adding a `<style>` element to the `<head>` section of the HTML document.
+  
+```HTML
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  ```
+
+  - Then, use `element.setAttribute()` which takes two arguments
+    - the attribute to be set on the element
+    - the value you want to set it to.
+
+```js
+para.setAttribute("class", "highlight");
+```
+
+- The above line will set the values stored in `class` of `highlight` and apply it to the `para` element.
