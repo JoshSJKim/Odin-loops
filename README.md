@@ -27,3 +27,10 @@ linkPara.appendChild(text);
 
 - Note that `document.querySelector("p")` points to the 'p' element that actually exists in the html document.
 - If there is a 'p' element that is created using `document.createElement('p')`, `document.querySelector('p')` will not recognize it because it only exists in the JS memory environment.
+
+- There are older methods of grabbing element reference
+  - `document.getElementById('id value')`
+  - `document.getElementByTagName('tag name')`
+- These can still be used, but not as convenient as `document.querySelector()`.
+
+- When using `document.querySelector('p')` for example, and there are multiple 'p' elements, but you need to grab a specific 'p' element, add a class or id attribute to that 'p' element and use the class/id value as the argument in `document.querySelector()`
