@@ -34,3 +34,12 @@ linkPara.appendChild(text);
 - These can still be used, but not as convenient as `document.querySelector()`.
 
 - When using `document.querySelector('p')` for example, and there are multiple 'p' elements, but you need to grab a specific 'p' element, add a class or id attribute to that 'p' element and use the class/id value as the argument in `document.querySelector()`
+
+## Moving and Removing Nodes
+
+- If you want to move a specific element to a different position on the html document, use `node.appendChild(element to be moved)`
+- This will not create a second copy.
+
+- To remove a node, and you know the parent, use `node.removeChild(element to be removed)`.
+- When removing a node based only on a reference to itself, use `element.remove()`.
+  - This is not supported in older browsers. In that case, use `element.parentNode.removeChild(element)`.
