@@ -36,7 +36,7 @@
       const addButton = document.querySelector("button");
 
       addButton.addEventListener("click", () => {
-        const createdList = itemInput.value;
+        const thingsToBuy = itemInput.value;
         itemInput.value = "";
       
       const listItem = document.createElement("li");
@@ -44,7 +44,7 @@
       const deleteButton = document.createElement("button");
 
       listItem.appendChild(listText);
-        listText.textContent = createdList;
+        listText.textContent = thingsToBuy;
       listItem.appendChild(deleteButton);
         deleteButton.textContent = "Delete";
 
