@@ -1,6 +1,8 @@
 # Odin-loops
 Loops exercise
 
+- prior to diving into the loop exercise, learn a bit about DOM manipulation
+
 ## DOM manipulation
 
 - Use `document.querySelector()` to 'grab' specific reference to html elements.
@@ -70,12 +72,20 @@ linkPara.appendChild(text);
   </head>
   ```
 
-  - Then, use `element.setAttribute()` which takes two arguments
-    - the attribute to be set on the element
-    - the value you want to set it to.
+- Then, use `element.setAttribute()` which takes two arguments
+  - the attribute to be set on the element
+  - the value you want to set it to.
 
 ```js
 para.setAttribute("class", "highlight");
 ```
 
 - The above line will set the values stored in `class` of `highlight` and apply it to the `para` element.
+
+## Some things to take away from the shopping list exercise
+
+- name const variables so that they are self explanatory.
+
+- `.focus()` in simple terms, focuses the cursor back to the input field so that it is not required to manually click on the input field again to make an entry.
+
+- `.addEventListener("click", () => {...})` function adds an action to be executed when (typically) a button is clicked.
