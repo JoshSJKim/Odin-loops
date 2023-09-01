@@ -43,6 +43,13 @@
       const listText = document.createElement("span");
       const deleteButton = document.createElement("button");
 
+      listItem.appendChild(listText);
+        listText.textContent = itemInput;
+      listItem.appendChild(deleteButton);
+        deleteButton.textContent = "Delete";
+
+      list.appendChild(listItem);
+
       
 
       })
