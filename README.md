@@ -90,7 +90,7 @@ para.setAttribute("class", "highlight");
 
 - `.addEventListener("click", () => {...})` function adds an action to be executed when (typically) a button is clicked.
 
-## Some things to take away from loops1 and loops2 exercise
+## Some things to take away from loops exercises
 
 Loops1
 
@@ -100,3 +100,52 @@ Loops2
 
 - `break` statement should be included INSIDE the `if` statement to terminate loop when a match is found.
 - CALL the function after the function is written to actually execute it to be displayed on the browser page.
+
+Loops3
+
+```js
+  <script>
+    let i = 500;
+    const para = document.createElement('p');
+
+    function isPrime(num) {
+      for(let i = 2; i < num; i++) {
+        if(num % i === 0) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+
+    // Initially tried the following
+
+    while (i > 1) {
+      isPrime(i);  // call the function. This will only call the function, but not do anything else. It will not proceed to the if statement.
+      if (isPrime(i) === true) { // Wanted to check if the number passed returns 'true'. But this is not the proper way to check
+        para.textContent = `${i}, `; // If I just do 'para.textContent = `${i}, `;', it will not concatenate the recurring results.
+                                     // it will only log the final result, which would be '2'.
+      }
+      i--;
+    }
+
+    // remove trailing separator
+    para.textContent = para.textContent.slice(0, -2);
+    
+    // Don't edit the code below here!
+    const section = document.querySelector('section');
+    section.appendChild(para);
+  </script>
+  ```
+
+- The fixed code is below.
+
+```js
+while (i < 1) {
+  if (isPrime(i)) {   // There is no need to call the function on its own, nor does it require comparison against 'true'
+                      // if the value of 'isPrime()' when called in the 'if' statement is 'true', it will proceed to execute the code.
+    para.textContent = `${i}, `;
+  }
+  i--;
+}
