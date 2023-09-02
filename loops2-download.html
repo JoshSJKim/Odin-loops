@@ -41,6 +41,17 @@
     ]
 
     // Add your code here
+    function findNumberByName(name) {
+      for (let i = 0; i <phonebook.length; i++) {
+        if (phonebook[i].name === name) {
+          para.textContent = `${phonebook[i].name}:  ${phonebook[i].number}`
+          break;
+
+        }
+      }
+    }
+
+    findNumberByName(name);
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
@@ -48,3 +59,4 @@
   </script>
 
 </html>
+                                           
