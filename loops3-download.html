@@ -49,6 +49,9 @@
       i--;
     }
 
+    // remove trailing separator
+    para.textContent = para.textContent.slice(0, -2);
+    
     // Don't edit the code below here!
     const section = document.querySelector('section');
     section.appendChild(para);
