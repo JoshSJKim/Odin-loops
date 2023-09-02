@@ -89,3 +89,14 @@ para.setAttribute("class", "highlight");
 - `.focus()` in simple terms, focuses the cursor back to the input field so that it is not required to manually click on the input field again to make an entry.
 
 - `.addEventListener("click", () => {...})` function adds an action to be executed when (typically) a button is clicked.
+
+## Some things to take away from loops1 and loops2 exercise
+
+Loops1
+
+- Use 'for...of' loop whenever possible for simplicity.
+
+Loops2
+
+- `break` statement should be included INSIDE the `if` statement to terminate loop when a match is found.
+- CALL the function after the function is written to actually execute it to be displayed on the browser page.
