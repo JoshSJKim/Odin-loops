@@ -31,9 +31,9 @@
 
     // Add your code here
 
-    for (let i = 0; i < myArray.length; i++) {
+    for (const ingredient of myArray) {
       const item = document.createElement('li');
-      item.textContent = myArray[i];
+      item.textContent = ingredient;
       list.appendChild(item);
     }
 
