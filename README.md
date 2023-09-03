@@ -152,6 +152,8 @@ while (i < 1) {
 
 ## Notes on Loops from javaScript.info
 
+### While loop evaluates and converts condition to boolean value
+
 - Any expression or variable can be a loop condition (not just comparisons).
 - In other words, the `while` loop evaluates and converts the condition to a boolean value.
 - For example, `while (i != 0)` can also be written as `while(i)`.
