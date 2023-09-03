@@ -177,3 +177,9 @@ while(i) alert(i--);
 - The loop will repeat until the condition is met.
 - In other words, `do...while` loop will ensure that the loop iterates AT LEAST ONCE even if the condition is false (since the condition is placed after the loop body).
 - This loop should be used only if you need the loop to iterate at least once.
+
+### Inline variable (for loop)
+
+- The most commonly used loop type is the `for` loop.
+- It places the variable `i` (or whatever you would like to call it) inside the loop.
+- This means that the variable `i` is visible only inside the loop.
