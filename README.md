@@ -156,3 +156,15 @@ while (i < 1) {
 - In other words, the `while` loop evaluates and converts the condition to a boolean value.
 - For example, `while (i != 0)` can also be written as `while(i)`.
   - If the condition `(i)` becomes `0`, or a `false` boolean value, it will terminate the loop.
+
+
+### Omit curly braces for single statement loop body
+
+- If the loop body (code to execute) has a single statement, the curly braces can be omitted.
+
+```js
+let i = 3;
+while(i) alert(i--);
+```
+
+- Although this makes the code simpler to write, I personally prefer including curly braces for easier reading and consistency.
