@@ -170,3 +170,10 @@ while(i) alert(i--);
 ```
 
 - Although this makes the code simpler to write, I personally prefer including curly braces for easier reading and consistency.
+
+### Note on do...while loop
+
+- `do...while` loop places the loop condition AFTER the loop body.
+- The loop will repeat until the condition is met.
+- In other words, `do...while` loop will ensure that the loop iterates AT LEAST ONCE even if the condition is false (since the condition is placed after the loop body).
+- This loop should be used only if you need the loop to iterate at least once.
