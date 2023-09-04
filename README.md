@@ -207,3 +207,21 @@ for (; i < 3 ;) { // the increment/decrement statement can be placed in the loop
 ```
 
 - Not sure how useful this is, but it's worth noting that it's possible.
+
+### Loop break
+
+- Normally, a loop terminates when its condition is falsy, or condition becomes 'satisfied'.
+- But there are cases where the loop condition must be checked not at the beginning or end of the loop, but in the middle of the loop.
+- The `break` directive, used in conjunction with an `infinite loop` can be used for such cases.
+
+```js
+let sum = 0;
+
+while (true) { // This while loop will run forever until the condition becomes falsy.
+  let value = +prompt("Enter a number", "");
+
+  if (!value) break; // If 'value' is falsy, break the loop
+  sum += value;      // If not, add `value` to sum
+}
+alert ("Sum: " + sum);  // When the loop breaks, alert the result
+```
