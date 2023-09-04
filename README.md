@@ -225,3 +225,31 @@ while (true) { // This while loop will run forever until the condition becomes f
 }
 alert ("Sum: " + sum);  // When the loop breaks, alert the result
 ```
+
+### Continue directive
+
+- It's like a 'lighter' version of `break`, but it doesn't terminate the loop completely.
+- `continue` will stop the current iteration and 'restarts' a new iteration (condition permitting).
+
+```js
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) continue; // if current iteration is an even number, stop and move on to the next number
+  alert(i);  // alert only odd numbers
+}
+```
+
+- The above can also be written as shown below
+
+```js
+for (let i = 0; i < 10; i++) {
+  if (i % 2) {  // if current value of `i` is evenly divisible by 2, it means that the result value of the condition is `0`, which is falsy. Move to the next iteration.
+    alert(i);   // Alert only odd values, same as the code above.
+  } // This created an extra nesting. `continue` decreases nesting.
+}
+```
+
+- Note that `break` and `continue` cannot be used in a ternary expression.
+
+```js
+(i > 5) ? alert(i) : continue; // This is illegal
+```
