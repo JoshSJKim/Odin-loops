@@ -183,3 +183,27 @@ while(i) alert(i--);
 - The most commonly used loop type is the `for` loop.
 - It places the variable `i` (or whatever you would like to call it) inside the loop.
 - This means that the variable `i` is visible only inside the loop.
+
+### Skipping parts (for loop)
+
+- Any part of the `for` loop can be omitted.
+
+```js
+let i = 0;  // since variable `i` is declared outside of the loop,
+
+for (; i < 3 ; i++) { // initial value of i can be omitted inside the loop.
+  alert(i);
+}
+```
+
+OR
+
+```js
+let i = 0; // once again, `i` is declared outside the loop.
+
+for (; i < 3 ;) { // the increment/decrement statement can be placed in the loop body
+  alert(i++);
+}
+```
+
+- Not sure how useful this is, but it's worth noting that it's possible.
