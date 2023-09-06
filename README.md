@@ -253,3 +253,25 @@ for (let i = 0; i < 10; i++) {
 ```js
 (i > 5) ? alert(i) : continue; // This is illegal
 ```
+
+### Labels for break and continue
+
+- Sometimes it is necessary to break out of multiple nested loops.
+
+```js
+outer: for (let i = 0; i < 3; i++) {    // The syntax for labels is <labelName>:, in this case 'outer:'.
+  for (let j = 0; j < 3; j++) {
+    let input = prompt(`value at coords (${i}, ${j})`, "");
+
+    if (!input) break outer;
+    // placing a break without a label will only break out of the inner loop
+    // By placing a label 'outer', the break directive will break the outer loop and alert "Done!".
+
+  }
+}
+
+alert("Done!");
+```
+
+- The `continue` directive can be used in a similar manner.
+- When used in conjunction with a label, code execution jumps to the next iteration of the LABELLED loop.
