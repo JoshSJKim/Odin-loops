@@ -10,6 +10,7 @@
   <script>
     // prompt user to input a number greater than 100
 
+    /*
     while (true) {
       let userInput = prompt("Enter a number greater than 100:", 0);
 
@@ -21,6 +22,16 @@
         break;
       }
     };
+    */
+
+    // While the above code works as intended, the solution provided on javaScript.info is much simpler using the do...while loop
+
+    let num;
+    
+    do {
+      num = prompt("Enter a number greater than 100:", 0);
+    } while (num <=100 && num);
+    
 
   </script>
   
