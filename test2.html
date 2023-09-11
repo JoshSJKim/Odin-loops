@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+
+  </div>
+  <script>
+
+    let output = document.querySelector("div");
+    let para = document.createElement("p");
+
+    let userInput = prompt("Enter a number to find out the prime numbers ranging from 2 to the provided number", "");
+
+    function isPrime(userInput) {
+      nextInLine:                             // use a label to break both loops if value passed is not a prime
+      for (let i = 2; i <= userInput; i++) {
+        let isPrime = true;                   // declare the initial value of `isPrime` to be `true`
+        for (let j = 2; j < i; j++) {
+          if (i % j === 0) {
+            isPrime = false;                  // if value passed is not a prime, skip to next iteration (outer loop)
+            continue nextInLine;              // Just noticed that it is possible to use `break` instead of `continue` with a label.
+          }                                   // `break` will break the inner loop and move on to the next iteration in the outer loop.
+        }
+        if(isPrime) {                         // if value passed is a prime number, concatenate the current value to the `para` variable
+          para.textContent += `${i}, `;
+        }
+      }
+      output.appendChild(para);               // append `para` to the div element named `output`
+      para.textContent = para.textContent.slice(0, -2); // remove the trailing comma
+
+    }
+    isPrime(userInput);                       // call the function
+
+
+  </script>
+</body>
+</html>
